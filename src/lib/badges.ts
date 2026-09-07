@@ -1,0 +1,68 @@
+import { GamificationBadge } from "../types";
+
+export const ALL_BADGES: GamificationBadge[] = [
+  {
+    id: "first-profitable-trade",
+    name: "First Profitable Trade Simulation",
+    description: "Executed and closed your first green trade in the TwoStarTrader simulator.",
+    icon: "TrendingUp",
+    points: 150,
+    category: "Simulation",
+  },
+  {
+    id: "advanced-ta-master",
+    name: "Advanced Technical Analysis Master",
+    description: "Scored 90%+ in the Technical Analysis certification examination.",
+    icon: "Award",
+    points: 250,
+    category: "Knowledge",
+  },
+  {
+    id: "ict-liquidity-hunter",
+    name: "ICT Liquidity Hunter",
+    description: "Mastered Fair Value Gaps (FVG), Killzones, and Judas Swing algorithmic execution.",
+    icon: "Target",
+    points: 300,
+    category: "Strategy",
+  },
+  {
+    id: "crt-specialist",
+    name: "CRT Range Specialist",
+    description: "Successfully analyzed high-timeframe Candle Range Theory and wick rejection liquidity.",
+    icon: "Flame",
+    points: 300,
+    category: "Strategy",
+  },
+  {
+    id: "smc-architect",
+    name: "SMC Order Flow Architect",
+    description: "Completed the full institutional Smart Money Concepts curriculum and mitigation models.",
+    icon: "Shield",
+    points: 300,
+    category: "Strategy",
+  },
+  {
+    id: "risk-guardian",
+    name: "Risk Management Guardian",
+    description: "Maintained strict 1-2% risk parameters across all simulated market trades without margin violation.",
+    icon: "ShieldCheck",
+    points: 200,
+    category: "Mastery",
+  },
+  {
+    id: "century-club",
+    name: "Century Club (100 Pips)",
+    description: "Banked over 100 cumulative pips of profit in the TwoStarTrader simulator.",
+    icon: "Zap",
+    points: 350,
+    category: "Simulation",
+  },
+  {
+    id: "twostar-elite",
+    name: "TwoStar Elite Graduate",
+    description: "Completed all core academy curriculum modules and passed final examinations.",
+    icon: "Crown",
+    points: 500,
+    category: "Mastery",
+  },
+];

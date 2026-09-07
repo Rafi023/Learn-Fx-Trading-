@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "Student or Administrator profile with enrollments and progress",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "admin"] },
+        "enrolledCourseIds": { "type": "array", "items": { "type": "string" } },
+        "completedLessonIds": { "type": "array", "items": { "type": "string" } },
+        "completedCourseIds": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "courses": {
+      "title": "Academy Course",
+      "description": "Curriculum course with lessons and quizzes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "level": { "type": "string" },
+        "price": { "type": "number" },
+        "duration": { "type": "string" },
+        "lessonsCount": { "type": "number" }
+      },
+      "required": ["id", "title", "level", "price"]
+    },
+    "certificates": {
+      "title": "Trading Certificate",
+      "description": "Graduation certificate issued after passing course quizzes",
+      "type": "object",
+      "properties": {
+        "certificateId": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "courseId": { "type": "string" },
+        "courseTitle": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "score": { "type": "number" }
+      },
+      "required": ["certificateId", "userId", "courseId", "courseTitle"]
+    },
+    "payments": {
+      "title": "Payment Order",
+      "description": "Course enrollment receipt",
+      "type": "object",
+      "properties": {
+        "transactionId": { "type": "string" },
+        "userId": { "type": "string" },
+        "amount": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["transactionId", "userId", "amount", "status"]
+    }
+  }
+}
